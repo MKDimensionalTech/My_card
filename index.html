@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="i" type="image/x-icon">
+</head>
+<body>
+    <div id="etapa1">
+        <div id="form">
+            <h1>Crie e Personalize seu card!</h1>
+            <label tabindex="0" for="foto1">Escolha uma fota para seu card!</label>
+            <br><input type="file" accept="image/png, image/jpeg" name="self" id="foto1">
+            <br><label for="seguidores1">Digite o seu número de seguidores</label>
+            <br><input type="number" name="seguidores" id="seguidores1" placeholder="ex: 100">
+            <br><label for="seguindo1">Digite o número de pessoas que você segue</label>
+            <br><input type="number" name="seguindo" id="seguindo1" placeholder="ex: 1000">
+            <br><label for="repositórios1">Digite o seu número de repositórios</label>
+            <br><input type="number" name="repositórios" id="repositórios1" placeholder="ex: 30">
+            <br><label for="insta1">Digite o seu instagram</label>
+            <br><input type="text" name="insta" id="insta1" placeholder="ex: @mycard">
+            <br><label for="local1">Digite o local que mora</label>
+            <br><input type="text" name="local" id="local1" placeholder="ex: São Paulo">
+            <br><button id="resp" onclick="resposta()">Preencher</button>
+        </div>
+        <div id="seta1">
+            <div id="s1"></div>
+            <div id="s2"></div>
+        </div>
+
+    </div>
+    <div id="etapa2">
+        <h1>Escolha sua cor favorita!</h1>
+        <div id="seta2">
+            <div id="s3"></div>
+            <div id="s4"></div>
+        </div>
+        <button style="margin-left: 380px;" id="mudarcor"><img src="" alt=""> Mudar de cor</button>
+        <div id="cores">
+            <div id="cartão">
+                <img id="foto" src="" alt="self">
+                <h3 id="seguidores"></h3>
+                <h3 id="seguindo"></h3>
+                <h3 id="repositórios"></h3>
+                <h3 id="insta"></h3>
+                <h3 id="local"></h3>
+            </div>
+            <div id="cor">
+                <div id="vermelho"></div>
+                <div id="amarelo"></div>
+                <div id="branco"></div>
+                <div id="rosa"></div>
+                <div id="rosachoque"></div>
+                <div id="rosababy"></div>
+                <div id="azul"></div>
+                <div id="ciano"></div>
+                <div id="azulclaro"></div>
+                <div id="verde"></div>
+                <div id="verdeescuro"></div>
+                <div id="verdeclaro"></div>
+                <div id="cinza"></div>
+                <div id="roxo"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        const imgMeme = document.querySelector('#foto');
+        const memeInput = document.querySelector('#foto1');
+        memeInput.addEventListener('change', function(evt) {
+        if (!(evt.target && evt.target.files && evt.target.files.length > 0)) {
+        return;
+        }
+
+        // Inicia o file-reader:
+        var r = new FileReader();
+        // Define o que ocorre quando concluir:
+        r.onload = function() {
+        // Define o `src` do elemento para o resultado:
+        imgMeme.src = r.result;
+        }
+        // Lê o arquivo e cria um link (o resultado vai ser enviado para o onload.
+        r.readAsDataURL(evt.target.files[0]);
+
+        // Define o texto (coisa que já tava fazendo, ~estou ignorando problema de segurança~):
+        document.querySelector('#text').innerHTML = textInsert.value;
+        });
+
+        function resposta(){
+            const seguidores1 = window.document.getElementById("seguidores1")
+            const r1 = Number(seguidores1.value)
+            const seguidores = window.document.getElementById("seguidores");
+            seguidores.innerHTML = `${r1} Seguidores`
+
+            const seguindo1 = window.document.getElementById("seguidores1")
+            const r2 = Number(seguindo1.value)
+            const seguindo = window.document.getElementById("seguindo");
+            seguindo.innerHTML = `${r2} Seguindo`
+
+            const repositórios1 = window.document.getElementById("seguidores1")
+            const r3 = Number(repositórios1.value)
+            const repositórios = window.document.getElementById("repositórios");
+            repositórios.innerHTML = `${r3} Repositórios`
+
+            const insta1 = window.document.getElementById("insta1")
+            const r4 = String(insta1.value)
+            const insta = window.document.getElementById("insta");
+            insta.innerHTML = `${r4}`
+
+            const local1 = window.document.getElementById("local1")
+            const r5 = String(local1.value)
+            const local = window.document.getElementById("local");
+            local.innerHTML = `${r5}`
+        }
+
+        const resp= document.getElementById('resp')
+        resp.addEventListener('click', result)
+        const seta1=document.getElementById('seta1')
+        const seta2=document.getElementById('seta2')
+        seta2.addEventListener('click',anterior)
+        const etapa2=document.getElementById('etapa2')
+        const etapa1=document.getElementById('etapa1')
+        const mudarcor = document.getElementById("mudarcor")
+        mudarcor.addEventListener('click',mudar)
+        const cores = document.getElementById("cores")
+        const cor = document.getElementById("cor")
+        const amarelo= document.getElementById("amarelo")
+        amarelo.addEventListener("click",cor1)
+        const vermelho= document.getElementById("vermelho")
+        vermelho.addEventListener("click",cor2)
+        const azul= document.getElementById("azul")
+        azul.addEventListener("click",cor3)
+        const rosa= document.getElementById("rosa")
+        rosa.addEventListener("click",cor4)
+        const rosachoque= document.getElementById("rosachoque")
+        rosachoque.addEventListener("click",cor5)
+        const rosababy= document.getElementById("rosababy")
+        rosababy.addEventListener("click",cor6)
+        const azulclaro= document.getElementById("azulclaro")
+        azulclaro.addEventListener("click",cor7)
+        const ciano= document.getElementById("ciano")
+        ciano.addEventListener("click",cor8)
+        const verde= document.getElementById("verde")
+        verde.addEventListener("click",cor9)
+        const verdeclaro= document.getElementById("verdeclaro")
+        verdeclaro.addEventListener("click",cor10)
+        const verdeescuro= document.getElementById("verdeescuro")
+        verdeescuro.addEventListener("click",cor11)
+        const roxo= document.getElementById("roxo")
+        roxo.addEventListener("click",cor12)
+        const branco= document.getElementById("branco")
+        branco.addEventListener("click",cor13)
+        const cinza= document.getElementById("cinza")
+        cinza.addEventListener("click",cor14)
+        function anterior(){
+            etapa1.style.display='inline-flex'
+            etapa2.style.display='none'
+        }
+        function result(){
+            etapa1.style.display='none'
+            etapa2.style.display='block'
+        }
+        function mudar(){
+            cor.style.display="block"
+            mudarcor.style.display="none"
+            mudarcor.style.marginLeft="380px"
+        }
+        function cor1(){
+            cor.style.display='none'
+            cores.style.backgroundColor='rgb(250, 131, 4)'
+            mudarcor.style.display="block"
+        }
+        function cor2(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(221, 250, 4)'
+        }
+        function cor3(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(4, 57, 250)'
+        }
+        function cor4(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(250, 4, 123)'
+        }
+        function cor5(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(250, 4, 70)'
+        }
+        function cor6(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(248, 80, 236)'
+        }
+        function cor7(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(4, 147, 250)'
+        }
+        function cor8(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(4, 246, 250)'
+        }
+        function cor9(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(53, 250, 4)'
+        }
+        function cor10(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(4, 250, 119)'
+        }
+        function cor11(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(0, 61, 11)'
+        }
+        function cor12(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(119, 4, 250)'
+        }
+        function cor13(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(255, 255, 255)'
+        }
+        function cor14(){
+            cor.style.display='none'
+            mudarcor.style.display="block"
+            cores.style.backgroundColor='rgb(73, 66, 82)'
+        }
+
+    </script>
+</body>
+</html>
