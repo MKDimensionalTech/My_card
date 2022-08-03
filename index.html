@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My card</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="i" type="image/x-icon">
+    <link rel="shortcut icon" href="icons8-colaboração-50.png" type="image/x-icon">
 </head>
 <body id="corpo">
     <div id="etapa1">
-        <div id="form">
-            <div id="primeiro">
+        <div id="primeiro">
                 <div id="noite"></div>
                 <div id="bola"></div>
             </div>
@@ -19,6 +18,14 @@
                 <div id="dia"></div>
                 <div id="bola1"></div>
             </div>
+            <div id="rodape">
+                <footer>
+                    <a href=""><li><img src="facebook.png" alt=""></li></a>
+                    <a href=""><li><img src="instagram.png" alt=""></li></a>
+                    <a href=""><li><img src="whatsapp.png" alt=""></li></a>
+                </footer>
+            </div>
+        <div id="form">
             <h1 id="titulo">Crie e Personalize seu card!</h1>
             <label class="lcor" tabindex="0" for="foto1">Escolha uma fota para seu card!</label>
             <br><input type="file" accept="image/png, image/jpeg" name="self" id="foto1">
@@ -38,7 +45,6 @@
             <div id="s1"></div>
             <div id="s2"></div>
         </div>
-
     </div>
     <div id="etapa2">
         <h1 id="titulo1">Escolha sua cor favorita!</h1>
@@ -75,6 +81,7 @@
             </div>
         </div>
     </div>
+    
     <script>
         const imgMeme = document.querySelector('#foto');
         const memeInput = document.querySelector('#foto1');
@@ -102,12 +109,12 @@
             const seguidores = window.document.getElementById("seguidores");
             seguidores.innerHTML = `${r1} Seguidores`
 
-            const seguindo1 = window.document.getElementById("seguidores1")
+            const seguindo1 = window.document.getElementById("seguindo1")
             const r2 = Number(seguindo1.value)
             const seguindo = window.document.getElementById("seguindo");
             seguindo.innerHTML = `${r2} Seguindo`
 
-            const repositórios1 = window.document.getElementById("seguidores1")
+            const repositórios1 = window.document.getElementById("repositórios1")
             const r3 = Number(repositórios1.value)
             const repositórios = window.document.getElementById("repositórios");
             repositórios.innerHTML = `${r3} Repositórios`
@@ -249,22 +256,22 @@
         function claro(){
             segundo.style.display='block'
             primeiro.style.display='none'
-            etapa1.style.backgroundColor='rgb(255, 255, 255)'
-            etapa2.style.backgroundColor='rgb(255, 255, 255)'
-            titulo.style.color='rgb(31, 2, 57)'
-            titulo1.style.color='rgb(31, 2, 57)'
-            corpo.style.backgroundColor='rgb(255, 255, 255)'
+            etapa1.style.backgroundColor='#00B386'
+            etapa2.style.backgroundColor='#ae00ff'
+            titulo.style.color='#530173'
+            titulo1.style.color='#16ff05'
+            corpo.style.backgroundColor='#ae00ff'
             form.style.color='rgb(0,0,0)'
 
         }
         function escuro(){
             segundo.style.display='none'
-            etapa1.style.backgroundColor='rgb(0,0,0)'
-            etapa2.style.backgroundColor='rgb(0,0,0)'
-            corpo.style.backgroundColor='rgb(0,0,0)'
+            etapa1.style.backgroundColor='#0a8002'
+            etapa2.style.backgroundColor='#34003e'
+            corpo.style.backgroundColor='#34003e'
             primeiro.style.display='block'
-            titulo.style.color='rgb(123, 32, 202)'
-            titulo1.style.color='rgb(123, 32, 202)'
+            titulo.style.color='#530173'
+            titulo1.style.color='#16ff05'
             form.style.color='rgb(255,255,255)'
 
         }
