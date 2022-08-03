@@ -11,12 +11,55 @@
     margin: 0px;
 }
 body{
-   background-color: black
+   background-color: black;
+   color: black;
+}
+div#primeiro{
+    display: block;
+}
+div#noite{
+    width: 40px;
+    height: 20px;
+    background-color: blueviolet;
+    color: blueviolet;
+    margin: 0px;
+    border-radius: 20px;
+    position: absolute;
+}
+div#bola{
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    color: blueviolet;
+    position: absolute;
+    animation: vai 1s;
+}
+div#segundo{
+    display: none;
+}
+div#bola1{
+    margin-left: 20px;
+    position: absolute;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+div#dia{
+    position: absolute;
+    border-radius: 20px;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(146, 48, 237);
+    color: rgb(188, 123, 248);
 }
 h1{
     font-family: 'beach','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
-    color: rgb(149, 67, 225);
+    color: rgb(123, 32, 202);
     margin: 20px;
 }
 div#etapa1{
@@ -26,12 +69,12 @@ div#etapa1{
 }
 div#etapa1>div#form{
     text-align: justify;
+    color: white;
 
 }
 div#etapa1>div#form>label{
-    font-family: 'butler','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
     margin: 60px;
-    color: white;
 }
 div#etapa1>div#form>input{
     padding: 8px;
@@ -41,15 +84,15 @@ div#etapa1>div#form>input{
     margin-bottom: 10px;
     border: 1px solid rgb(210, 105, 248);
     border-radius: 20px;
-    background-color: black;
+    background-color: rgb(132, 0, 181);
     color: white;
 }
 div#etapa1>div#form>button{
     border: none;
     background: rgba(59, 1, 95, 0.988);
-    color: white;
     box-shadow: 5px 5px 5px rgb(27, 0, 48);
     padding: 20px;
+    color: white;
     border-radius: 20px 20px;
     margin-left: 100px;
     margin-top: 40px;
@@ -148,10 +191,10 @@ div#s2{
     }
     div#etapa1>div#form{
         margin: 10px;
+        color: white;
     }
     div#etapa1>div#form>label{
         margin: 20px;
-        color: white;
         text-align: justify;
     }
     div#etapa1>div#form>input{
@@ -160,18 +203,18 @@ div#s2{
         text-align: center;
         border: 1px solid rgb(210, 105, 248);
         border-radius: 20px;
-        background-color: black;
-        color: white;
+        background-color: rgb(132, 0, 181);
+        color: black;
     }
     div#etapa1>div#form>button{
         border: none;
         background: rgba(59, 1, 95, 0.988);
-        color: white;
         box-shadow: 5px 5px 5px rgb(27, 0, 48);
         padding: 20px;
         border-radius: 20px 20px;
         margin-left: 50px;
         margin-top: 40px;
+        color: white;
         cursor: pointer;
     }
     div#s1{

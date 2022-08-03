@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="i" type="image/x-icon">
 </head>
-<body>
+<body id="corpo">
     <div id="etapa1">
         <div id="form">
-            <h1>Crie e Personalize seu card!</h1>
-            <label tabindex="0" for="foto1">Escolha uma fota para seu card!</label>
+            <div id="primeiro">
+                <div id="noite"></div>
+                <div id="bola"></div>
+            </div>
+            <div id="segundo">
+                <div id="dia"></div>
+                <div id="bola1"></div>
+            </div>
+            <h1 id="titulo">Crie e Personalize seu card!</h1>
+            <label class="lcor" tabindex="0" for="foto1">Escolha uma fota para seu card!</label>
             <br><input type="file" accept="image/png, image/jpeg" name="self" id="foto1">
-            <br><label for="seguidores1">Digite o seu número de seguidores</label>
-            <br><input type="number" name="seguidores" id="seguidores1" placeholder="ex: 100">
-            <br><label for="seguindo1">Digite o número de pessoas que você segue</label>
-            <br><input type="number" name="seguindo" id="seguindo1" placeholder="ex: 1000">
-            <br><label for="repositórios1">Digite o seu número de repositórios</label>
-            <br><input type="number" name="repositórios" id="repositórios1" placeholder="ex: 30">
-            <br><label for="insta1">Digite o seu instagram</label>
+            <br><label class="lcor" for="seguidores1">Digite o seu número de seguidores</label>
+            <br><input type="number" name="seguidores" id="seguidores1" placeholder="ex: 10000">
+            <br><label class="lcor" for="seguindo1">Digite o número de pessoas que você segue</label>
+            <br><input type="number" name="seguindo" id="seguindo1" placeholder="ex: 10000">
+            <br><label class="lcor" for="repositórios1">Digite o seu número de repositórios</label>
+            <br><input type="number" name="repositórios" id="repositórios1" placeholder="ex: 3000">
+            <br><label class="lcor" for="insta1">Digite o seu instagram</label>
             <br><input type="text" name="insta" id="insta1" placeholder="ex: @mycard">
-            <br><label for="local1">Digite o local que mora</label>
+            <br><label class="lcor" for="local1">Digite o local que mora</label>
             <br><input type="text" name="local" id="local1" placeholder="ex: São Paulo">
             <br><button id="resp" onclick="resposta()">Preencher</button>
         </div>
@@ -33,11 +41,13 @@
 
     </div>
     <div id="etapa2">
-        <h1>Escolha sua cor favorita!</h1>
-        <div id="seta2">
-            <div id="s3"></div>
-            <div id="s4"></div>
-        </div>
+        <h1 id="titulo1">Escolha sua cor favorita!</h1>
+        <a href="index.html">
+            <div id="seta2">
+                <div id="s3"></div>
+                <div id="s4"></div>
+            </div>
+        </a>
         <button style="margin-left: 380px;" id="mudarcor"><img src="" alt=""> Mudar de cor</button>
         <div id="cores">
             <div id="cartão">
@@ -51,7 +61,6 @@
             <div id="cor">
                 <div id="vermelho"></div>
                 <div id="amarelo"></div>
-                <div id="branco"></div>
                 <div id="rosa"></div>
                 <div id="rosachoque"></div>
                 <div id="rosababy"></div>
@@ -67,7 +76,6 @@
         </div>
     </div>
     <script>
-        
         const imgMeme = document.querySelector('#foto');
         const memeInput = document.querySelector('#foto1');
         memeInput.addEventListener('change', function(evt) {
@@ -88,7 +96,6 @@
         // Define o texto (coisa que já tava fazendo, ~estou ignorando problema de segurança~):
         document.querySelector('#text').innerHTML = textInsert.value;
         });
-
         function resposta(){
             const seguidores1 = window.document.getElementById("seguidores1")
             const r1 = Number(seguidores1.value)
@@ -151,8 +158,6 @@
         verdeescuro.addEventListener("click",cor11)
         const roxo= document.getElementById("roxo")
         roxo.addEventListener("click",cor12)
-        const branco= document.getElementById("branco")
-        branco.addEventListener("click",cor13)
         const cinza= document.getElementById("cinza")
         cinza.addEventListener("click",cor14)
         function anterior(){
@@ -228,17 +233,41 @@
             mudarcor.style.display="block"
             cores.style.backgroundColor='rgb(119, 4, 250)'
         }
-        function cor13(){
-            cor.style.display='none'
-            mudarcor.style.display="block"
-            cores.style.backgroundColor='rgb(255, 255, 255)'
-        }
         function cor14(){
             cor.style.display='none'
             mudarcor.style.display="block"
             cores.style.backgroundColor='rgb(73, 66, 82)'
         }
+        const form = document.getElementById('form')
+        const titulo = document.getElementById('titulo')
+        const titulo1 = document.getElementById('titulo1')
+        const corpo = document.getElementById('corpo')
+        const primeiro=document.getElementById("primeiro")
+        primeiro.addEventListener('click', claro)
+        const segundo = document.getElementById('segundo')
+        segundo.addEventListener('click', escuro)
+        function claro(){
+            segundo.style.display='block'
+            primeiro.style.display='none'
+            etapa1.style.backgroundColor='rgb(255, 255, 255)'
+            etapa2.style.backgroundColor='rgb(255, 255, 255)'
+            titulo.style.color='rgb(31, 2, 57)'
+            titulo1.style.color='rgb(31, 2, 57)'
+            corpo.style.backgroundColor='rgb(255, 255, 255)'
+            form.style.color='rgb(0,0,0)'
 
+        }
+        function escuro(){
+            segundo.style.display='none'
+            etapa1.style.backgroundColor='rgb(0,0,0)'
+            etapa2.style.backgroundColor='rgb(0,0,0)'
+            corpo.style.backgroundColor='rgb(0,0,0)'
+            primeiro.style.display='block'
+            titulo.style.color='rgb(123, 32, 202)'
+            titulo1.style.color='rgb(123, 32, 202)'
+            form.style.color='rgb(255,255,255)'
+
+        }
     </script>
 </body>
 </html>
