@@ -232,23 +232,22 @@ div#s2{
         cursor: pointer;
     }
     div#s1{
-        margin-top: 350px;
+        margin-top: 370px;
         color: white;
         background-color: #530173;
-        width: 70px;
+        width: 30px;
         height: 4px;
         transform: rotate(-35deg);
     }
     
     div#s2{
         float: right;
-        position: absolute;
         color: white;
         background-color: #530173;
-        width: 70px;
+        width: 30px;
         height: 4px;
         transform: rotate(35deg);
-        margin-top: -42px;
+        margin-top: -20px;
     }
 }
 div#etapa2{
