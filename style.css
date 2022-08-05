@@ -11,6 +11,7 @@
     margin: 0px;
 }
 body{
+    background-color: #0a8002;
    color: black;
 }
 div#primeiro{
@@ -65,21 +66,21 @@ h1{
     margin: 0px;
 }
 div#etapa1{
-    width: 100%;
     background-color: #0a8002;
     display: inline-flex;
+    width: 100%;
 }
 div#etapa1>div#form{
     text-align: justify;
     color: white;
     background-color: rgba(125, 251, 90, 0.712);
     padding: 20px;
-    margin: 20px 10px 10px 10px;
+    margin: 20px 10px 10px 40px;
     border-radius: 30px;
 }
 div#etapa1>div#form>label{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
-    margin: 60px;
+    margin: 80px;
 }
 div#etapa1>div#form>input{
     padding: 8px;
@@ -96,7 +97,7 @@ div#etapa1>div#form>button{
     border: none;
     background-color: #530173;
     box-shadow: 5px 5px 5px rgb(27, 0, 48);
-    padding: 20px;
+    padding: 30px;
     color: white;
     border-radius: 20px 20px;
     margin-left: 100px;
@@ -191,9 +192,8 @@ div#s2{
         color: white;
         background-color: rgba(125, 251, 90, 0.712);
         padding: 20px;
-        margin: 20px 10px 10px 10px;
+        margin: 20px 0px 0px 20px;
         border-radius: 30px;
-        height: 700px;
     }
     h1{
         font-size: 2.5em;
@@ -283,6 +283,7 @@ div#etapa2>div#cores{
     height: 470px;
     border-radius: 30px;
     display: inline-flex;
+    margin-bottom: 50px;
 }
 div#etapa2>div#cores>div#cartão{
     position: absolute;
@@ -308,12 +309,11 @@ div#etapa2>div#cores>div#cartão>img{
 }
 div#cor{
     background-color: white;
-    width: 50px;
+    width: 35px;
     height: 510px;
-    padding: 08px;
+    padding: 05px;
     margin-left: 330px;
     margin-top:-70px;
-
 }
 div#etapa2>div#cores>div#cor>div#vermelho{
     width: 30px;
