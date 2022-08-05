@@ -129,7 +129,36 @@
             const local = window.document.getElementById("local");
             local.innerHTML = `${r5}`
         }
+        const form = document.getElementById('form')
+        const titulo = document.getElementById('titulo')
+        const titulo1 = document.getElementById('titulo1')
+        const corpo = document.getElementById('corpo')
+        const primeiro=document.getElementById("primeiro")
+        primeiro.addEventListener('click', claro)
+        const segundo = document.getElementById('segundo')
+        segundo.addEventListener('click', escuro)
+        function claro(){
+            segundo.style.display='block'
+            primeiro.style.display='none'
+            etapa1.style.backgroundColor='#00B386'
+            etapa2.style.backgroundColor='#ae00ff'
+            titulo.style.color='#530173'
+            titulo1.style.color='#16ff05'
+            corpo.style.backgroundColor='#ae00ff'
+            form.style.color='rgb(0,0,0)'
 
+        }
+        function escuro(){
+            segundo.style.display='none'
+            etapa1.style.backgroundColor='#0a8002'
+            etapa2.style.backgroundColor='#34003e'
+            corpo.style.backgroundColor='#34003e'
+            primeiro.style.display='block'
+            titulo.style.color='#530173'
+            titulo1.style.color='#16ff05'
+            form.style.color='rgb(255,255,255)'
+
+        }
         const resp= document.getElementById('resp')
         resp.addEventListener('click', result)
         const seta1=document.getElementById('seta1')
@@ -174,6 +203,7 @@
         function result(){
             etapa1.style.display='none'
             etapa2.style.display='block'
+            corpo.style.backgroundColor='#2c003e'
         }
         function mudar(){
             cor.style.display="block"
@@ -245,36 +275,7 @@
             mudarcor.style.display="block"
             cores.style.backgroundColor='rgb(73, 66, 82)'
         }
-        const form = document.getElementById('form')
-        const titulo = document.getElementById('titulo')
-        const titulo1 = document.getElementById('titulo1')
-        const corpo = document.getElementById('corpo')
-        const primeiro=document.getElementById("primeiro")
-        primeiro.addEventListener('click', claro)
-        const segundo = document.getElementById('segundo')
-        segundo.addEventListener('click', escuro)
-        function claro(){
-            segundo.style.display='block'
-            primeiro.style.display='none'
-            etapa1.style.backgroundColor='#00B386'
-            etapa2.style.backgroundColor='#ae00ff'
-            titulo.style.color='#530173'
-            titulo1.style.color='#16ff05'
-            corpo.style.backgroundColor='#ae00ff'
-            form.style.color='rgb(0,0,0)'
-
-        }
-        function escuro(){
-            segundo.style.display='none'
-            etapa1.style.backgroundColor='#0a8002'
-            etapa2.style.backgroundColor='#34003e'
-            corpo.style.backgroundColor='#34003e'
-            primeiro.style.display='block'
-            titulo.style.color='#530173'
-            titulo1.style.color='#16ff05'
-            form.style.color='rgb(255,255,255)'
-
-        }
+        
     </script>
 </body>
 </html>
