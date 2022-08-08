@@ -11,8 +11,7 @@
     margin: 0px;
 }
 body{
-    background-color: #0a8002;
-   color: black;
+    background-color: black;
 }
 div#primeiro{
     display: block;
@@ -21,8 +20,7 @@ div#primeiro{
 div#noite{
     width: 40px;
     height: 20px;
-    background-color:#530173;
-    color: blueviolet;
+    background-color:#faf9fa;
     margin: 0px;
     border-radius: 20px;
     position: absolute;
@@ -31,8 +29,7 @@ div#bola{
     border-radius: 20px;
     width: 20px;
     height: 20px;
-    background-color: rgb(255, 255, 255);
-    color: blueviolet;
+    background-color: rgb(0, 0, 0);
     position: absolute;
     animation: vai 1s;
 }
@@ -47,7 +44,7 @@ div#bola1{
     border-radius: 20px;
     width: 20px;
     height: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
 div#dia{
@@ -56,47 +53,46 @@ div#dia{
     margin: 0px;
     width: 40px;
     height: 20px;
-    background-color:#530173;
+    background-color:#070707;
     color: rgb(188, 123, 248);
 }
 h1{
     font-family: 'beach','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
-    color: #530173;
+    color: #006745;
     margin: 0px;
 }
 div#etapa1{
-    background-color: #0a8002;
+    background-color: black;
     display: inline-flex;
     width: 100%;
 }
 div#etapa1>div#form{
     text-align: justify;
-    color: white;
-    background-color: rgba(125, 251, 90, 0.712);
+    color:black;
+    background-color: rgb(223, 247, 235);
     padding: 20px;
-    margin: 20px 10px 10px 40px;
+    margin: 30px 10px 10px 40px;
     border-radius: 30px;
 }
 div#etapa1>div#form>label{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
-    margin: 80px;
+    margin: 90px;
 }
 div#etapa1>div#form>input{
     padding: 8px;
     text-align: center; 
     margin-left: 80px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
-    border: 1px solid rgb(210, 105, 248);
+    border: 1px solid rgb(0, 119, 67);
     border-radius: 20px;
-    background-color: #530173;
-    color: white;
+    color:black;
 }
 div#etapa1>div#form>button{
     border: none;
-    background-color: #530173;
-    box-shadow: 5px 5px 5px rgb(27, 0, 48);
+    background-color: #00542d;
+    box-shadow: 5px 5px 5px rgb(0, 48, 25);
     padding: 30px;
     color: white;
     border-radius: 20px 20px;
@@ -104,8 +100,8 @@ div#etapa1>div#form>button{
     cursor: pointer;
 }
 div#seta1{
-    margin-left: 20px;
     margin-left: 300px;
+    margin-right: 40px;
     animation: move 1s infinite;
     cursor: pointer;
 }
@@ -121,7 +117,7 @@ div#seta1{
 div#s1{
     margin-top: 300px;
     color: white;
-    background-color: #530173;
+    background-color: #017362;
     width: 100px;
     height: 4px;
     transform: rotate(-35deg);
@@ -131,7 +127,7 @@ div#s2{
     float: right;
     position: absolute;
     color: white;
-    background-color: #530173;
+    background-color: #017362;
     width: 100px;
     height: 4px;
     transform: rotate(35deg);
@@ -189,21 +185,17 @@ div#s2{
     }
     div#etapa1>div#form{
         text-align: justify;
-        color: white;
-        background-color: rgba(125, 251, 90, 0.712);
+        color:black;
+        background-color: rgb(223, 247, 235);
         padding: 20px;
         margin: 20px 0px 0px 20px;
         border-radius: 30px;
     }
     h1{
         font-size: 2.5em;
-        color: #530173;
+        color: #006745;
         margin: 20px;
         text-align: center;
-    }
-    div#etapa1>div#form{
-        margin: 10px;
-        color: white;
     }
     div#etapa1>div#form>label{
         margin: 20px;
@@ -213,15 +205,14 @@ div#s2{
         padding: 8px;
         margin-left: 20px;
         text-align: center;
-        border: 1px solid rgb(210, 105, 248);
+        border: 1px solid rgb(0, 119, 67);
         border-radius: 20px;
-        background-color: #530173;
         color: black;
     }
     div#etapa1>div#form>button{
         border: none;
-        background: #530173;
-        box-shadow: 5px 5px 5px rgb(27, 0, 48);
+        background-color:  #00542d;
+        box-shadow: 5px 5px 5px rgb(0, 48, 25);
         padding: 20px;
         border-radius: 20px 20px;
         margin-left: 50px;
@@ -229,10 +220,13 @@ div#s2{
         color: white;
         cursor: pointer;
     }
+    div#seta1{
+        margin-right: 10px;
+    }
     div#s1{
         margin-top: 370px;
         color: white;
-        background-color: #530173;
+        background-color: #017362;
         width: 30px;
         height: 4px;
         transform: rotate(-35deg);
@@ -241,7 +235,7 @@ div#s2{
     div#s2{
         float: right;
         color: white;
-        background-color: #530173;
+        background-color: #017362;
         width: 30px;
         height: 4px;
         transform: rotate(35deg);
@@ -249,16 +243,15 @@ div#s2{
     }
 }
 div#etapa2{
-    background-color:#2c003e;
+    background-color:#010101;
     text-align: center;
     display: none;
     height: 100%;
 }
 div#etapa2>h1{
     margin:20px ;
-    color:#16ff05;
-    background-color: #7900916f;
-    box-shadow: 2px 2px 2px #34003e;
+    color:#006745;
+    background-color: rgb(223, 247, 235);
     padding: 10px;
     border-radius: 30px 0px;
     font-family: 'beach','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -269,15 +262,15 @@ div#etapa2>button{
     display: none;
     border: none;
     padding: 10px;
-    background-color: #16ff05;
+    background-color:#00542d;
     color: white;
-    box-shadow: 2px 2px 2px rgb(0, 128, 11);
+    box-shadow: 2px 2px 2px rgb(0, 48, 25);
     border-radius: 20px;
     position: absolute;
     font-family: 'butler','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 div#etapa2>div#cores{
-    background-color: rgb(255, 255, 255);
+    background-color:rgb(223, 247, 235);
     margin-top: 100px;
     width: 320px;
     height: 470px;
@@ -308,7 +301,7 @@ div#etapa2>div#cores>div#cartão>img{
     border-radius: 100px 100px;
 }
 div#cor{
-    background-color: white;
+    background-color: rgb(223, 247, 235);
     width: 35px;
     height: 510px;
     padding: 05px;
@@ -423,7 +416,7 @@ div#seta2{
 div#s3{
     margin-top: 250px;
     color: white;
-    background-color: #16ff05;
+    background-color: #017362;
     width: 50px;
     height: 4px;
     transform: rotate(35deg);
@@ -433,7 +426,7 @@ div#s4{
     float: right;
     position: absolute;
     color: white;
-    background-color:#16ff05;
+    background-color:#017362;
     width: 50px;
     height: 4px;
     transform: rotate(-35deg);
@@ -452,6 +445,9 @@ footer{
     display: inline;
 }
 img{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
     width: 20px;
     margin: 10px;
 }
